@@ -1,0 +1,16 @@
+const tabNavigations = Array.from(document.querySelectorAll('.tab__navigation'));
+
+tabNavigations.forEach(navigation => {
+  const tabs = Array.from(navigation.querySelectorAll('.tab'));
+  const contents = Array.from(navigation.nextElementSibling.querySelectorAll('.tab__content'));
+
+  tabs.forEach((tab, index) => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(item => item.classList.remove('tab_active'));
+      contents.forEach(item => item.classList.remove('tab__content_active'));
+
+      tab.classList.add('tab_active');
+      contents[index].classList.add('tab__content_active');
+    });
+  });
+});
