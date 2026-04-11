@@ -89,3 +89,20 @@ body {
 .product-shadow {
   position: absolute;
 }
+
+.cart {
+  display: none;
+}
+
+.cart__title {
+  text-align: center;
+}
+
+.cart__product-remove {
+  display: block;
+  margin-top: 6px;
+  color: red;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 14px;
+}
